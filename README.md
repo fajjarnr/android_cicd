@@ -4,14 +4,14 @@
 
 move keystore to **/app**
 
-edit **gradle.properties**
+add to **gradle.properties**
 
     MYAPP_UPLOAD_STORE_FILE=my-upload-key.keystore
     MYAPP_UPLOAD_KEY_ALIAS=my-key-alias
     MYAPP_UPLOAD_STORE_PASSWORD=<password>
     MYAPP_UPLOAD_KEY_PASSWORD=<password>
 
-edit **build.gradle on /app/**
+add to **/app/build.gradle**
 
     signingConfigs{
         release {
@@ -24,6 +24,6 @@ edit **build.gradle on /app/**
         }
     }
 
-add on buildType{}
+add to **buildType{}**
 
     signingConfig signingConfigs.release
